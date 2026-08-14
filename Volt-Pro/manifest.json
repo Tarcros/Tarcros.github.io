@@ -1,0 +1,16 @@
+{
+  "name": "Volt Pro",
+  "short_name": "Volt Pro",
+  "description": "Conversion Log vers Rec.709 et export vidéo 100 % local sur l’iPhone.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#050A08",
+  "theme_color": "#050A08",
+  "icons": [
+    { "src": "icons/icon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

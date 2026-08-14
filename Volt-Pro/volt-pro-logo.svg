@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 144" role="img" aria-labelledby="title desc">
+  <title id="title">Volt Pro</title>
+  <desc id="desc">Original geometric V and lightning mark followed by the Volt Pro wordmark.</desc>
+  <rect width="144" height="144" rx="34" fill="#0B1712"/>
+  <path d="M27 34h29l18 47 17-47h29L78 112H64L27 34Z" fill="#DDFCEF"/>
+  <path d="m88 20-29 49h21l-14 55 49-66H91l18-38H88Z" fill="#32E887"/>
+  <text x="172" y="91" fill="#F3F8F5" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="-2">Volt Pro</text>
+</svg>
