@@ -1,6 +1,6 @@
-const CACHE = 'volt-pro-assetsindexNQoNYcLjsassetsindexblAZJLfJcss';
+const CACHE = 'volt-pro-assetsindexDRyR2yTjsassetsindexElYjhBrcss';
 const BASE = "/Volt-Pro/";
-const PRECACHE = ["/Volt-Pro/","/Volt-Pro/index.html","/Volt-Pro/manifest.json","/Volt-Pro/volt-logo.png","/Volt-Pro/volt-mark.svg","/Volt-Pro/icons/icon-180.png","/Volt-Pro/icons/icon-192.png","/Volt-Pro/icons/icon-512.png","/Volt-Pro/assets/index-N_QoNYcL.js","/Volt-Pro/assets/index-blAZJLfJ.css"];
+const PRECACHE = ["/Volt-Pro/","/Volt-Pro/index.html","/Volt-Pro/manifest.json","/Volt-Pro/volt-logo.png","/Volt-Pro/volt-mark.svg","/Volt-Pro/icons/icon-180.png","/Volt-Pro/icons/icon-192.png","/Volt-Pro/icons/icon-512.png","/Volt-Pro/assets/index-DRyR_2yT.js","/Volt-Pro/assets/index-ElYjh-Br.css"];
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(PRECACHE)).then(() => self.skipWaiting()));
 });
