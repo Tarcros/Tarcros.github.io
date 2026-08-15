@@ -1,4 +1,4 @@
-const VERSION = "e912ea4";
+const VERSION = "5a1ecdf";
 const CACHE = 'volt-pro-' + VERSION;
 const BASE = "/Volt-Pro/";
 const PRECACHE = ["/Volt-Pro/","/Volt-Pro/index.html","/Volt-Pro/manifest.json","/Volt-Pro/volt-logo.png","/Volt-Pro/volt-mark.svg","/Volt-Pro/icons/icon-180.png","/Volt-Pro/icons/icon-192.png","/Volt-Pro/icons/icon-512.png","/Volt-Pro/assets/index-251LDXLe.js","/Volt-Pro/assets/index-B79YulC7.css"];
@@ -63,6 +63,9 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET') return;
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
+  // Le script du worker ne doit jamais etre servi depuis le cache : une copie
+  // figee ferait croire que la version deployee est l ancienne.
+  if (url.pathname === BASE + 'sw.js') return;
 
   if (request.mode === 'navigate') {
     event.respondWith(networkFirst(request, BASE + 'index.html').catch(async () => (await caches.match(BASE + 'index.html')) || Response.error()));
