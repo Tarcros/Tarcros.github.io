@@ -730,7 +730,7 @@ void main() {
           <select id="profile"></select>
           <p id="profile-detail" class="field-help"></p>
           <div class="lut-row">
-            <div><strong id="lut-name">Aucune LUT chargée</strong><small id="lut-detail">Importe la LUT officielle .cube du fabricant.</small></div>
+            <div><strong id="lut-name">Aucune LUT chargée</strong><small id="lut-detail">LUT .cube officielle du fabricant.</small></div>
             <label class="small-button" for="lut-input">Importer</label>
             <input id="lut-input" type="file" multiple hidden />
           </div>
@@ -788,7 +788,7 @@ void main() {
             <button class="chip" type="button" data-social-app="instagram">Instagram</button>
             <button class="chip" type="button" data-social-app="tiktok">TikTok</button>
           </div>
-          <p class="field-help">Le cadre montre ce qui sera gardé si tu recadres ce rush pour ce format, et l’habillage montre où l’appli recouvre l’image. Ça ne modifie rien : c’est un repère.</p>
+          <p class="field-help">Repère seulement : rien n’est modifié.</p>
 
           <label class="field-label">Remplissage</label>
           <div class="tool-row">
@@ -798,7 +798,7 @@ void main() {
           <label class="range-row" data-reset-value="100">Zoom <output id="zoom-value">100 %</output>
             <input id="zoom" type="range" min="100" max="300" step="1" value="100" />
           </label>
-          <p class="field-help">Fais glisser l’image dans l’aperçu pour choisir la partie visible. Ce que tu vois est exactement ce qui sera exporté.</p>
+          <p class="field-help">Fais glisser l’image pour choisir la partie visible.</p>
         </section>
 
         <section class="control-panel" data-panel="audio">
@@ -813,7 +813,7 @@ void main() {
             <input id="audio-volume" type="range" min="0" max="200" step="1" value="100" />
           </label>
           <label class="toggle-row"><input id="audio-limiter" type="checkbox" checked /><span>Éviter la saturation au-dessus de 100 %</span></label>
-          <p id="audio-help" class="field-help">Le son d’origine est conservé tel quel tant que le volume reste à 100 %. Au-delà, il est réencodé en AAC.</p>
+          <p id="audio-help" class="field-help">Le son est réencodé en AAC dès que le volume change.</p>
         </section>
 
         <section class="control-panel" data-panel="trim">
@@ -835,7 +835,7 @@ void main() {
             <button id="trim-play-range" class="chip" type="button">Lire la sélection</button>
           </div>
           <div class="trim-times"><output id="trim-in-value">00:00:00:00</output><output id="trim-out-value">00:00:00:00</output></div>
-          <p class="field-help">Fais glisser les poignées jaunes. Seule cette portion sera encodée : le fichier d’origine n’est jamais modifié.</p>
+          <p class="field-help">Seule cette portion sera encodée.</p>
         </section>
 
         <section class="control-panel" data-panel="speed">
@@ -879,15 +879,15 @@ void main() {
                     <small>${e.hint}</small>
                   </button>`}).join(``)}
               </div>
-              <p class="field-help">Touche la courbe pour ajouter un point, fais-le glisser pour régler l’instant et la vitesse. Les petites poignées adoucissent la transition. Le son est coupé uniquement pendant la partie qui accélère ou ralentit.</p>
+              <p class="field-help">Touche pour ajouter un point, glisse pour le régler. Le son se coupe pendant les variations.</p>
             </div>
           </div>
-          <p class="field-help">Aucune image n’est inventée : le ralenti réutilise les images réellement filmées.</p>
+          <p class="field-help">Aucune image inventée : le ralenti réutilise les images filmées.</p>
         </section>
 
         <section class="control-panel" data-panel="capture">
           <div class="panel-title"><div><p>Photo</p><h2>Capturer une image</h2></div></div>
-          <p class="field-help">Enregistre l’image affichée, avec la conversion, la LUT, les corrections et le cadrage appliqués.</p>
+          <p class="field-help">Enregistre l’image telle qu’elle s’affiche.</p>
           <button id="capture-frame" class="primary-button" type="button">${V(`camera`,20)} Capturer l’image</button>
           <div id="capture-result" class="capture-result hidden">
             <img id="capture-preview" alt="Image capturée" />
@@ -900,7 +900,7 @@ void main() {
 
         <section class="control-panel" data-panel="balance">
           <div class="panel-title"><div><p>Neutralité</p><h2>Balance des blancs</h2></div><button id="auto-white-balance" class="small-button" type="button">AWB auto</button></div>
-          <p class="field-help">Analyse les zones grises de la frame affichée. Tous les changements restent annulables.</p>
+          <p class="field-help">Analyse les zones grises de l’image affichée.</p>
           <div id="balance-adjustments" class="adjustments"></div>
         </section>
 
@@ -916,7 +916,7 @@ void main() {
             ${[[`master`,`RVB`],[`red`,`R`],[`green`,`V`],[`blue`,`B`]].map(([e,t],n)=>`<button class="chip curve-channel ${n===0?`active`:``}" type="button" data-curve-channel="${e}">${t}</button>`).join(``)}
           </div>
           <div id="curve-canvas" class="curve-canvas"></div>
-          <p class="field-help">Touche la courbe pour ajouter un point, fais-le glisser pour le régler. Un appui long sur un point le supprime.</p>
+          <p class="field-help">Touche pour ajouter un point, appui long pour le supprimer.</p>
           <label class="field-label">Courbes courantes</label>
           <div id="curve-presets" class="ramp-preset-grid">
             ${hf.map(e=>`
@@ -967,7 +967,7 @@ void main() {
           <div class="panel-title"><div><p>Sortie</p><h2>Export MP4</h2></div></div>
           <label class="field-label" for="preset">Destination</label>
           <select id="preset"></select>
-          <p class="field-help">Le preset règle automatiquement le format, la taille et le débit.</p>
+          <p class="field-help">Le preset règle format, taille et débit.</p>
           <details id="advanced-export" class="advanced-export">
             <summary>Réglages avancés</summary>
             <div class="form-grid">
