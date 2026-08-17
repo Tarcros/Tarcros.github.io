@@ -1,4 +1,4 @@
-const VERSION = "437d3ca";
+const VERSION = "a19d4b3";
 const CACHE = 'volt-pro-' + VERSION;
 const BASE = "/Volt-Pro/";
 const PRECACHE = ["/Volt-Pro/","/Volt-Pro/index.html","/Volt-Pro/manifest.json","/Volt-Pro/volt-logo.png","/Volt-Pro/volt-mark.svg","/Volt-Pro/icons/icon-180.png","/Volt-Pro/icons/icon-192.png","/Volt-Pro/icons/icon-512.png","/Volt-Pro/assets/index-DhCe-rxc.js","/Volt-Pro/assets/index-DTcscvHr.css"];
