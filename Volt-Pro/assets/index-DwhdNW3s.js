@@ -701,6 +701,17 @@ void main() {
       <p id="active-pipeline" class="active-pipeline">Rec.709 · passthrough · pas de LUT</p>
     </section>
 
+    <!-- Le transport se place directement sous l'aperçu, comme dans Premiere,
+         CapCut et les applications de grading mobiles : il commande la vidéo,
+         il doit être à côté d'elle. En bas de l'écran, sous la barre
+         d'onglets, il en était séparé par toute la zone de réglages. -->
+    <footer class="transport-bar">
+      <button id="toggle-trim" class="transport-button" type="button" aria-label="Ouvrir le trim" disabled><span>✂</span></button>
+      <button id="play-pause" class="transport-button" type="button" aria-label="Lire" disabled><span>▶</span></button>
+      <time id="current-time">00:00:00:00</time>
+      <div id="timeline-wrap" class="timeline-wrap"><i></i><input id="timeline" type="range" min="0" max="1" step="0.001" value="0" aria-label="Position dans la vidéo" disabled /></div>
+      <time id="duration-time">00:00:00:00</time>
+    </footer>
     <section class="controls-zone">
       <div id="panel-scroll" class="panel-scroll">
         <!-- Barre d'outils du clip : des icônes, comme dans un logiciel de
@@ -1001,13 +1012,6 @@ void main() {
       </div>
     </section>
 
-    <footer class="transport-bar">
-      <button id="toggle-trim" class="transport-button" type="button" aria-label="Ouvrir le trim" disabled><span>✂</span></button>
-      <button id="play-pause" class="transport-button" type="button" aria-label="Lire" disabled><span>▶</span></button>
-      <time id="current-time">00:00:00:00</time>
-      <div id="timeline-wrap" class="timeline-wrap"><i></i><input id="timeline" type="range" min="0" max="1" step="0.001" value="0" aria-label="Position dans la vidéo" disabled /></div>
-      <time id="duration-time">00:00:00:00</time>
-    </footer>
     <dialog id="shortcut-help" class="batch-dialog shortcut-help">
       <div class="batch-sheet-head"><h2>Raccourcis clavier</h2><button id="shortcut-help-close" class="batch-sheet-close" type="button" aria-label="Fermer">✕</button></div>
       <div id="shortcut-help-body" class="shortcut-help-body"></div>
