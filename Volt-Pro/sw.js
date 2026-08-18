@@ -1,7 +1,7 @@
-const VERSION = "4b3a861";
+const VERSION = "e7fa40b";
 const CACHE = 'volt-pro-' + VERSION;
 const BASE = "/Volt-Pro/";
-const PRECACHE = ["/Volt-Pro/","/Volt-Pro/index.html","/Volt-Pro/manifest.json","/Volt-Pro/volt-logo.png","/Volt-Pro/volt-mark.svg","/Volt-Pro/icons/icon-180.png","/Volt-Pro/icons/icon-192.png","/Volt-Pro/icons/icon-512.png","/Volt-Pro/assets/index-DuSBs5xw.js","/Volt-Pro/assets/index-B9auLCaO.css"];
+const PRECACHE = ["/Volt-Pro/","/Volt-Pro/index.html","/Volt-Pro/manifest.json","/Volt-Pro/volt-logo.png","/Volt-Pro/volt-mark.svg","/Volt-Pro/icons/icon-180.png","/Volt-Pro/icons/icon-192.png","/Volt-Pro/icons/icon-512.png","/Volt-Pro/assets/index-DivNX641.js","/Volt-Pro/assets/index-Bq8_J-8l.css"];
 // Fichiers non haches : leur contenu change sans que l'URL bouge, donc ils
 // doivent toujours etre redemandes au reseau en premier.
 const NETWORK_FIRST = [BASE, BASE + 'index.html', BASE + 'manifest.json'];
